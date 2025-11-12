@@ -3,37 +3,40 @@ description: "Advanced AI Trading System for Crypto Futures"
 theme: jekyll-theme-cayman
 url: "https://dsx-ai-trading.github.io/documentation/"
 
-# Configuración de Just the Docs
-just_the_docs:
-  # Navegación lateral
-  collections:
-    docs:
-      nav:
-        - title: "🌐 Idioma / Language"
-          items:
-            - title: "🇪🇸 Español"
-              url: /index.md
-            - title: "🇺🇸 English" 
-              url: /index.en.md
-        - title: "📚 Documentación"
-          items:
-            - title: "¿Qué es DSX AI Trading?"
-              url: /index.md#-qué-es-dsx-ai-trading
-            - title: "Los 3 Pilares"
-              url: /index.md#los-3-pilares-de-nuestra-ventaja
-            - title: "Explicación de Features"
-              url: /index.md#-explicación-de-features-indicadores
-            - title: "Agentes de IA"
-              url: /index.md#-los-agentes-de-ia
-            - title: "Alertas de Telegram"
-              url: /index.md#-anatomía-de-las-alertas-de-telegram
-            - title: "Gestión de Riesgo"
-              url: /index.md#-aviso-importante-gestión-de-riesgo-y-descargo-de-responsabilidad
+# Configuración principal de navegación
+nav_order: 1
+nav_exclude: false
 
-# Opciones de visualización
-search: true
+# Navegación personalizada
+nav:
+  - title: "🌐 Idioma / Language"
+    nav_order: 1
+    children:
+      - title: "🇪🇸 Español"
+        url: /index.md
+        nav_order: 1
+      - title: "🇺🇸 English" 
+        url: /index.en.md
+        nav_order: 2
+  - title: "📚 Documentación DSX"
+    nav_order: 2
+    children:
+      - title: "¿Qué es DSX AI Trading?"
+        url: /index.md#-qué-es-dsx-ai-trading
+      - title: "Los 3 Pilares"
+        url: /index.md#los-3-pilares-de-nuestra-ventaja
+      - title: "Explicación de Features"
+        url: /index.md#-explicación-de-features-indicadores
+      - title: "Agentes de IA"
+        url: /index.md#-los-agentes-de-ia
+      - title: "Alertas de Telegram"
+        url: /index.md#-anatomía-de-las-alertas-de-telegram
+      - title: "Gestión de Riesgo"
+        url: /index.md#-aviso-importante-gestión-de-riesgo-y-descargo-de-responsabilidad
+
+# Configuración de búsqueda
+search_enabled: true
+search.heading_level: 2
+
+# Encabezados automáticos
 heading_anchors: true
-footer_content: "Copyright &copy; 2024 DSX AI Trading. All rights reserved."
-
-# Idioma por defecto
-lang: "es-ES"
