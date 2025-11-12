@@ -2,8 +2,14 @@
 layout: default
 title: "DSX AI Trading - Español"
 nav_order: 1
-lang: es
+has_children: false
 ---
+
+<div style="background: #e8f4fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0366d6; margin-bottom: 20px;">
+<strong>🌐 IDIOMA:</strong> 
+📍 <strong>Español</strong> | 
+<a href="index.en.md">🔄 English</a>
+</div>
 
 # 🚀 ¿Qué es DSX AI Trading?
 
@@ -205,6 +211,7 @@ En resumen: **DSX AI Trading** es una herramienta de análisis de datos avanzada
 <p>📍 Estás viendo la documentación en <strong>Español</strong></p>
 <p>🔗 <a href="index.en.md">View documentation in English</a></p>
 </div>
+
 
 
 
