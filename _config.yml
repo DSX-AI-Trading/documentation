@@ -1,6 +1,6 @@
 title: "DSX AI Trading"
 description: "Advanced AI Trading System for Crypto Futures"
-theme: just-the-docs
+theme: jekyll-theme-cayman
 url: "https://dsx-ai-trading.github.io/documentation/"
 
 # Configuración de Just the Docs
