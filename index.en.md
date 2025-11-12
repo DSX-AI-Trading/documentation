@@ -1,11 +1,13 @@
+---
 layout: default
-title: "DSX AI Trading - Español"
-lang: es
+title: "DSX AI Trading - English" 
+lang: en
+---
 
-<div align="center" style="background-color: #f0f8ff; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
-🔄 <strong>LANGUAGE/IDIOMA:</strong> 
-<strong>ENGLISH</strong> | 
-<a href="index.md">ESPAÑOL</a>
+<div style="background: #f5f5f5; padding: 15px; border-radius: 8px; border-left: 4px solid #007cba; margin-bottom: 20px;">
+<strong>🌐 LANGUAGE/IDIOMA:</strong> 
+<span style="color: #007cba;">📍 ENGLISH</span> | 
+<a href="index.md" style="color: #666; text-decoration: none;">🔄 ESPAÑOL</a>
 </div>
 
 # 🚀 What is DSX AI Trading?
@@ -197,5 +199,6 @@ The AI provides the *signal*. You provide the *management*. The most important f
 
 
 In short: **DSX AI Trading** is an advanced data analysis tool to help you spot opportunities. It is not a "get rich quick" system or a guarantee of profits. Use it as an intelligent co-pilot, but remember that you are the one driving.
+
 
 
