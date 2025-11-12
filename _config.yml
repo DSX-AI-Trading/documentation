@@ -1,0 +1,8 @@
+title: "DSX AI Trading"
+description: "Advanced AI Trading System for Crypto Futures"
+theme: jekyll-theme-cayman
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  toc_levels: 1..6
