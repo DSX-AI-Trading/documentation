@@ -1,8 +1,39 @@
 title: "DSX AI Trading"
 description: "Advanced AI Trading System for Crypto Futures"
-theme: jekyll-theme-midnight
-markdown: kramdown
-kramdown:
-  input: GFM
-  auto_ids: true
-  toc_levels: 1..6
+theme: just-the-docs
+url: "https://dsx-ai-trading.github.io/documentation/"
+
+# Configuración de Just the Docs
+just_the_docs:
+  # Navegación lateral
+  collections:
+    docs:
+      nav:
+        - title: "🌐 Idioma / Language"
+          items:
+            - title: "🇪🇸 Español"
+              url: /index.md
+            - title: "🇺🇸 English" 
+              url: /index.en.md
+        - title: "📚 Documentación"
+          items:
+            - title: "¿Qué es DSX AI Trading?"
+              url: /index.md#-qué-es-dsx-ai-trading
+            - title: "Los 3 Pilares"
+              url: /index.md#los-3-pilares-de-nuestra-ventaja
+            - title: "Explicación de Features"
+              url: /index.md#-explicación-de-features-indicadores
+            - title: "Agentes de IA"
+              url: /index.md#-los-agentes-de-ia
+            - title: "Alertas de Telegram"
+              url: /index.md#-anatomía-de-las-alertas-de-telegram
+            - title: "Gestión de Riesgo"
+              url: /index.md#-aviso-importante-gestión-de-riesgo-y-descargo-de-responsabilidad
+
+# Opciones de visualización
+search: true
+heading_anchors: true
+footer_content: "Copyright &copy; 2024 DSX AI Trading. All rights reserved."
+
+# Idioma por defecto
+lang: "es-ES"
