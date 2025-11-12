@@ -5,12 +5,6 @@ nav_order: 1
 has_children: false
 ---
 
-<div style="background: #e8f4fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0366d6; margin-bottom: 20px;">
-<strong>🌐 IDIOMA:</strong> 
-📍 <strong>Español</strong> | 
-<a href="index.en.md">🔄 English</a>
-</div>
-
 # 🚀 ¿Qué es DSX AI Trading?
 
 > 🌐 **Idioma:** [Español](#) | [English](index.en.md)
@@ -206,11 +200,6 @@ La IA proporciona la *señal*. Usted proporciona la *gestión*. El factor más i
 
 En resumen: **DSX AI Trading** es una herramienta de análisis de datos avanzada. Úselo como un copiloto inteligente, pero recuerde que usted es quien conduce el vehículo.
 
-<div class="language-switcher" style="background: #f0f8ff; padding: 15px; border-radius: 8px; margin: 20px 0;">
-<p><strong>🌐 Idioma / Language:</strong></p>
-<p>📍 Estás viendo la documentación en <strong>Español</strong></p>
-<p>🔗 <a href="index.en.md">View documentation in English</a></p>
-</div>
 
 
 
