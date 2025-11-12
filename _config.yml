@@ -1,6 +1,6 @@
 title: "DSX AI Trading"
 description: "Advanced AI Trading System for Crypto Futures"
-theme: theme: jekyll-theme-midnight
+theme: jekyll-theme-midnight
 markdown: kramdown
 kramdown:
   input: GFM
