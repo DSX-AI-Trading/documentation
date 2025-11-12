@@ -1,3 +1,7 @@
+# DSX AI Trading - English Version
+
+[Read in Spanish](index.md)
+
 # 🚀 What is DSX AI Trading?
 
 **DSX AI Trading** is an advanced market analysis and signal generation system, designed specifically for the volatile world of cryptocurrency futures, **operating exclusively on the Binance exchange (Binance Futures)**.
@@ -184,5 +188,6 @@ The AI provides the *signal*. You provide the *management*. The most important f
 * **Golden Rule:** **Never risk more than you are willing to lose.**
 * **Position Sizing:** It is your job to determine *how much money* to allocate to each trade. A professional rarely risks more than 1-2% of their total capital on a single trade.
 * **Trader's Autonomy:** You have final control. If you don't like a signal, or it doesn't fit your personal analysis, **do not take the trade**.
+
 
 In short: **DSX AI Trading** is an advanced data analysis tool to help you spot opportunities. It is not a "get rich quick" system or a guarantee of profits. Use it as an intelligent co-pilot, but remember that you are the one driving.
