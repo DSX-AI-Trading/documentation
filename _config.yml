@@ -1,21 +1,9 @@
-# --- TEMA ---
-# Activa el tema 'just-the-docs', que SÍ tiene índice
-theme: just-the-docs
-remote_theme: just-the-docs/just-the-docs
-
-# --- TÍTULO Y URL ---
-# (La URL debe ser esta para que funcione el selector de idioma)
 title: "DSX AI Trading"
 description: "Advanced AI Trading System for Crypto Futures"
-url: "https://dsx-ai-trading.github.io/documentation"
+theme: jekyll-theme-cayman
+url: "https://dsx-ai-trading.github.io/documentation/"
 
-# --- BÚSQUEDA ---
+# Habilita la búsqueda (si el tema la soporta)
 search_enabled: true
-
-# --- SELECTOR DE IDIOMA ---
-# Esto añade los enlaces 🇪🇸 / 🇺🇸 en la parte superior derecha
-aux_links:
-  "🇪🇸 Español":
-    - "/documentation/index.md"
-  "🇺🇸 English":
-    - "/documentation/index.en.md"
+# Crea enlaces automáticos para los encabezados
+heading_anchors: true
