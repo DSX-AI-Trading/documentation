@@ -11,9 +11,20 @@ has_children: false
 
 **DSX AI Trading** es un sistema avanzado de análisis de mercado y generación de señales, diseñado específicamente para el volátil mundo de los futuros de criptomodenas, **operando exclusivamente en el exchange Binance (Binance Futures)**.
 
-No es un "bot" más. Es un **ecosistema de inteligencia artificial** de nivel institucional, compuesto por múltiples agentes especializados que trabajan en conjunto para analizar el mercado desde todos los ángulos posibles.
+No es un "bot" más. Es un **ecosistema de inteligencia artificial** de nivel institucional...
+*(el resto de tu introducción)*
 
-Nuestra misión es simple: **Utilizar el poder del *machine learning* para encontrar patrones y oportunidades que el ojo humano no puede ver**, traduciendo gigabytes de datos complejos en señales claras y accionables.
+---
+
+### 📚 Tabla de Contenidos
+
+1.  [Los 3 Pilares de Nuestra Ventaja](#los-3-pilares-de-nuestra-ventaja)
+2.  [Explicación de Features (Indicadores)](#-explicación-de-features-indicadores)
+3.  [Los Agentes de IA](#-los-agentes-de-ia)
+4.  [Anatomía de las Alertas de Telegram](#-anatomía-de-las-alertas-de-telegram)
+5.  [Aviso Importante: Gestión de Riesgo](#-aviso-importante-gestión-de-riesgo-y-descargo-de-responsabilidad)
+
+---
 
 ## Los 3 Pilares de Nuestra Ventaja
 
@@ -199,6 +210,7 @@ La IA proporciona la *señal*. Usted proporciona la *gestión*. El factor más i
 
 
 En resumen: **DSX AI Trading** es una herramienta de análisis de datos avanzada. Úselo como un copiloto inteligente, pero recuerde que usted es quien conduce el vehículo.
+
 
 
 
