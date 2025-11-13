@@ -1,42 +1,21 @@
+# --- TEMA ---
+# Activa el tema 'just-the-docs', que SÍ tiene índice
+theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+
+# --- TÍTULO Y URL ---
+# (La URL debe ser esta para que funcione el selector de idioma)
 title: "DSX AI Trading"
 description: "Advanced AI Trading System for Crypto Futures"
-theme: jekyll-theme-cayman
-url: "https://dsx-ai-trading.github.io/documentation/"
+url: "https://dsx-ai-trading.github.io/documentation"
 
-# Configuración principal de navegación
-nav_order: 1
-nav_exclude: false
-
-# Navegación personalizada
-nav:
-  - title: "🌐 Idioma / Language"
-    nav_order: 1
-    children:
-      - title: "🇪🇸 Español"
-        url: /index.md
-        nav_order: 1
-      - title: "🇺🇸 English" 
-        url: /index.en.md
-        nav_order: 2
-  - title: "📚 Documentación DSX"
-    nav_order: 2
-    children:
-      - title: "¿Qué es DSX AI Trading?"
-        url: /index.md#-qué-es-dsx-ai-trading
-      - title: "Los 3 Pilares"
-        url: /index.md#los-3-pilares-de-nuestra-ventaja
-      - title: "Explicación de Features"
-        url: /index.md#-explicación-de-features-indicadores
-      - title: "Agentes de IA"
-        url: /index.md#-los-agentes-de-ia
-      - title: "Alertas de Telegram"
-        url: /index.md#-anatomía-de-las-alertas-de-telegram
-      - title: "Gestión de Riesgo"
-        url: /index.md#-aviso-importante-gestión-de-riesgo-y-descargo-de-responsabilidad
-
-# Configuración de búsqueda
+# --- BÚSQUEDA ---
 search_enabled: true
-search.heading_level: 2
 
-# Encabezados automáticos
-heading_anchors: true
+# --- SELECTOR DE IDIOMA ---
+# Esto añade los enlaces 🇪🇸 / 🇺🇸 en la parte superior derecha
+aux_links:
+  "🇪🇸 Español":
+    - "/documentation/index.md"
+  "🇺🇸 English":
+    - "/documentation/index.en.md"
