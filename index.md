@@ -17,24 +17,32 @@ Nuestra misión es simple: **Utilizar el poder del *machine learning* para encon
 
 ---
 
-## Los 3 Pilares de Nuestra Ventaja
+## 🤖 Nuestro Ecosistema de Agentes
 
-El poder de DSX AI Trading no proviene de un solo indicador, sino de la **confluencia** de tres capas de análisis:
+El poder de DSX AI Trading proviene de dos tipos de agentes especializados que analizan el mercado de formas fundamentalmente diferentes.
 
-1.  **Análisis de Microestructura (Agentes Caza-Muros):**
-    Monitorizamos la "profundidad" del mercado en tiempo real (el libro de órdenes). Esto nos permite ver la intención de los grandes jugadores ("ballenas") antes de que sus acciones se reflejen en el precio.
-2.  **Análisis de Sentimiento y Liquidación (Agentes Caza-Liq):**
-    Medimos la "psicología" del mercado. Al rastrear el apalancamiento, las tasas de financiación y el pánico/euforia de la multitud, nuestros agentes se especializan en anticipar movimientos bruscos causados por "cascadas de liquidaciones".
-3.  **Análisis de Tendencia Especializado (Agentes Swing):**
-    Identificamos la "marea" principal del mercado. Para esto, hemos dividido nuestro agente Swing en **cuatro agentes independientes y especializados**, uno para cada temporalidad clave (1h, 4h, 1d, 1w), permitiendo capturar tendencias en todos los niveles.
+### 1. El Agente "Caza-Liquidaciones" (LIQ)
+Este es nuestro agente de **scalping** de alta frecuencia. Su misión es doble:
+
+* **1. Analiza la Microestructura:** Vigila el libro de órdenes (Grupo A) en tiempo real para "cazar" las intenciones de las "ballenas", buscando "muros" de liquidez que actúen como suelos o techos.
+* **2. Analiza el Sentimiento:** Mide la "psicología" del mercado (Grupos C y D). Se especializa en anticipar movimientos bruscos causados por "cascadas de liquidaciones" operando *en contra* de la multitud eufórica o en pánico.
+
+Al combinar estas dos técnicas, el agente LIQ busca capturar movimientos rápidos y explosivos con una alta precisión.
+
+### 2. Los Agentes de Tendencia (MTA)
+Estos son nuestros agentes "estrategas" de **swing trading**. En lugar de un solo agente "multi-temporalidad", hemos creado **tres agentes distintos y especializados (1h, 4h y 1d)**.
+
+Estos son los tres agentes que **superaron nuestro riguroso backtesting histórico**, demostrando ser robustos y rentables. Cada agente (ej. el de 4h) opera de forma independiente, enfocado 100% en su propio marco de tiempo para capturar la "marea" principal del mercado.
+
+---
 
 ## 📊 Explicación de Features (Indicadores)
 
 Esta es la "lista de ingredientes" o los datos que nuestra IA utiliza para tomar decisiones.
 
-### Grupo A: Order Book y Liquidez (El Agente "Caza-Muros")
+### Grupo A: Order Book y Liquidez (Análisis de Microestructura)
 
-**Concepto Clave:** El "Order Book" (Libro de Órdenes) es la lista de todas las ofertas de compra (Bid) y venta (Ask). El Agente "Caza-Muros" vigila esta lista para encontrar "muros", que son órdenes gigantescas puestas por "ballenas" (traders con mucho dinero).
+**Concepto Clave:** El "Order Book" (Libro de Órdenes) es la lista de todas las ofertas de compra (Bid) y venta (Ask). El agente vigila esta lista para encontrar "muros", que son órdenes gigantescas puestas por "ballenas" (traders con mucho dinero).
 
 * **A1_order_book_imbalance:** Mide si hay más "presión" de compra o de venta ahora mismo.
 * **A2_large_walls_presence:** Es un detector de "ballenas". Busca si ha aparecido una orden de compra o venta inusualmente grande.
@@ -82,89 +90,55 @@ Esta es la "lista de ingredientes" o los datos que nuestra IA utiliza para tomar
 * **D27_global_ls_ratio (Ratio Global Long/Short):** Mide el sentimiento de *todos* los traders. Si el 90% apuesta a que sube, es una señal de euforia extrema y peligro.
 * **D28_toptrader_ls_ratio (Ratio Long/Short de Top Traders):** Mide lo que hacen los "profesionales". Se compara con el D27 para ver si los "pros" están de acuerdo con la "manada" o en contra.
 
-## 🤖 Los Agentes de IA
-
-### Módulo 1: El Agente "Caza-Muros" (Wall Hunter)
-
-* **¿Qué es?** Es nuestro agente de scalping de alta frecuencia. Su misión es vigilar el libro de órdenes (Grupo A) para "cazar" las intenciones de las "ballenas".
-* **¿Cómo funciona?** Analiza la "profundidad del mercado" buscando órdenes gigantescas ("muros") que actúan como "suelos" o "techos" para el precio.
-* **La Ventaja:** Busca posicionarse *con* las ballenas y no *contra* ellas, capturando pequeños movimientos con alta precisión.
-
-### Módulo 2: El Agente "Caza-Liquidaciones" (Liquidation Hunter)
-
-* **¿Qué es?** Es nuestro agente de "impulso", diseñado para detectar "puntos de dolor" y anticipar "cascadas de liquidaciones".
-* **¿Cómo funciona?** Es un especialista en sentimiento (Grupos C y D). Mide la "tensión" y la "euforia" o "pánico" de la multitud, sabiendo que el mercado a menudo hace lo contrario para "castigar" a esa mayoría.
-* **La Ventaja:** No sigue al precio, sigue a la "multitud". Se anticipa a movimientos explosivos operando *en contra* del sentimiento popular.
-
-### Módulo 3: Los Agentes "Swing" (1h, 4h, 1d, 1w)
-
-* **¿Qué son?** Estos son nuestros agentes "estrategas". En lugar de un solo agente "multi-temporalidad" (MTA), hemos creado **cuatro agentes distintos y especializados** (1h, 4h, 1d, 1w) para capturar las tendencias dominantes en cada nivel.
-* **¿Cómo funcionan?** Cada agente (ej. el de 4h) opera de forma independiente, enfocado 100% en su propio marco de tiempo. Analizan la fuerza de la tendencia (B16) y el momentum (B13) para encontrar puntos de entrada óptimos. El modelo de IA también calcula una **puntuación de confianza** para cada señal.
-* **La Ventaja:** Esta especialización nos da una precisión mucho mayor. El agente de 1h captura tendencias intradía, mientras que el de 1w se enfoca en los grandes movimientos del mercado, permitiendo al usuario elegir la estrategia que mejor se adapte a su estilo.
+---
 
 ## 📢 Anatomía de las Alertas de Telegram
 
 Cada alerta es una **"Propuesta de Operación"** completa generada por la IA. Incluye la razón de la entrada y los parámetros exactos de gestión que el modelo ha calculado como óptimos.
 
-### Ejemplo 1: El Agente "Caza-Muros" (Scalping)
-
-🧱 **DSX - ALERTA CAZA-MUROS** 🧱  
-📈 **TIPO:** SCALP (Rebote en Muro)  
-🪙 **PAR:** ETH/USDT  
-⏰ **FECHA:** 2025-11-12 12:30:00 UTC  
-⏳ **TEMPORALIDAD:** 1m  
-🧠 **CONFIANZA:** 92.15%  
-🎯 **PRECIO ENTRADA:** 4,010.50  
-⛔ **STOP LOSS:** 3,998.00 (Justo bajo el muro)  
-✅ **TAKE PROFIT:** 4,025.00 (Objetivo rápido)  
-
-**EVIDENCIA (Por qué el Agente actuó):**  
-[1] Muro de Compra (A2): DETECTADO (Nivel: 4,000)  
-[2] Desequilibrio OB (A1): FUERTE COMPRA (Ratio 1.85)  
-[3] Spread Bid/Ask (A5): BAJO (Mercado estable)
-
-**Interpretación:** La IA propone entrar en 4,010.50. El riesgo (Stop Loss) se define en 3,998.00, protegido por el muro de 4,000. El objetivo de beneficio (Take Profit) es un movimiento corto y rápido.
-
-### Ejemplo 2: El Agente "Caza-Liquidaciones" (Impulso)
+### Ejemplo 1: El Agente "Caza-Liquidaciones" (Scalping)
 
 🔥 **DSX - ALERTA CAZA-LIQ** 🔥  
-📈 **TIPO:** LONG (Impulso Anti-Sentimiento)  
+📈 **TIPO:** SCALP (Impulso Anti-Sentimiento)  
 🪙 **PAR:** BTC/USDT  
 ⏰ **FECHA:** 2025-11-12 11:50:00 UTC  
-⏳ **TEMPORALIDAD:** 5m  
-🧠 **CONFIANZA:** 85.50%  
+⏳ **TEMPORALIDAD:** 1m-5m  
+🧠 **CONFIANZA:** 88.20%  
 🎯 **PRECIO ENTRADA:** 60,500.25  
 ⛔ **STOP LOSS:** 60,150.00 (SL de volatilidad)  
 ✅ **TAKE PROFIT:** 61,200.00 (Objetivo de squeeze)  
 
 **EVIDENCIA (Por qué el Agente actuó):**  
 [1] Sentimiento Global (D27): EXTREMO SHORT (Ratio 9.1:1)  
-[2] Funding Rate (C20): NEGATIVO (Tasa -0.045%)  
-[3] Volumen Liq 1m (C26): PICO (4.5M Liquidado)
+[2] Muro de Compra (A2): DETECTADO (Nivel: 60,200)  
+[3] Volumen Liq 1m (C26): PICO (4.5M Liquidado)  
+[4] Funding Rate (C20): NEGATIVO (Tasa -0.045%)
 
-**Interpretación:** La IA entra en 60,500. Define un Stop Loss (60,150) lo suficientemente alejado para no ser invalidado por el "ruido" inicial, y un objetivo de beneficio (61,200) donde la cascada de liquidaciones *shorts* podría empezar a agotarse.
+**Interpretación:** La IA detecta pánico extremo (todos en SHORT), pero al mismo tiempo ve una "ballena" (Muro) protegiendo el precio en 60,200. La IA apuesta a que el pánico es exagerado y el precio rebotará bruscamente (un "squeeze") para liquidar a los que van en SHORT.
 
-### Ejemplo 3: El Agente "Swing" (Ej. 1 Semana)
+### Ejemplo 2: El Agente "Swing" (Tendencia)
 
 Estas alertas ahora incluyen **TEMPORALIDAD** (el timeframe del agente) y **CONFIANZA** (la puntuación de la IA).
 
 📊 **DSX - ALERTA SWING MTA** 📊  
-📈 **TIPO:** SWING SHORT (1w)  
-🪙 **PAR:** DOGEUSDT  
-⏰ **FECHA:** 2025-11-03 00:00:00 UTC  
-⏳ **TEMPORALIDAD:** 1w  
-🧠 **CONFIANZA:** 72.06%  
-🎯 **PRECIO ENTRADA:** 0.1792  
-⛔️ **STOP LOSS:** 0.2061  
-✅ **TAKE PROFIT:** 0.1255  
+📈 **TIPO:** SWING LONG (4h)  
+🪙 **PAR:** SOL/USDT  
+⏰ **FECHA:** 2025-11-03 16:00:00 UTC  
+⏳ **TEMPORALIDAD:** 4h  
+🧠 **CONFIANZA:** 81.30%  
+🎯 **PRECIO ENTRADA:** 142.50  
+⛔️ **STOP LOSS:** 138.22  
+✅ **TAKE PROFIT:** 151.05  
 
 **EVIDENCIA (Por qué el Agente actuó):**  
-[1] RSI (1w): 43.55  
-[2] ADX (1w): 20.38  
-[3] RSI (1d): 32.67  
-[4] ADX (4h): 39.33
+[1] RSI (4h): 58.10 (Momentum alcista)  
+[2] ADX (4h): 29.50 (Tendencia confirmada)  
+[3] RSI (1d): 65.20 (Contexto general alcista)  
+[4] ADX (1h): 22.00 (Entrada de bajo riesgo)
 
-**Interpretación:** El agente especializado de 1 semana (1w) detectó una señal SHORT. La IA le asigna una **confianza del 72.06%**. La evidencia muestra una mezcla de indicadores de varias temporalidades que el modelo considera bajista.
+**Interpretación:** El agente especializado de 4 horas (4h) detectó una señal LONG. La IA le asigna una **confianza del 81.30%**. La evidencia muestra una confluencia de indicadores de tendencia y momentum en múltiples temporalidades que el modelo considera fuertemente alcista.
+
+---
 
 ## ⚠️ AVISO IMPORTANTE: Gestión de Riesgo y Descargo de Responsabilidad
 
@@ -199,6 +173,4 @@ La IA proporciona la *señal*. Usted proporciona la *gestión*. El factor más i
 * **Dimensionamiento de la Posición (Position Sizing):** Es su trabajo determinar *cuánto dinero* va a asignar a cada operación. Un profesional rara vez arriesga más del 1% o 2% de su capital total en una sola operación.
 * **Autonomía del Trader:** Usted tiene el control final. Si una señal no le gusta, no la opere.
 
-
 En resumen: **DSX AI Trading** es una herramienta de análisis de datos avanzada. Úselo como un copiloto inteligente, pero recuerde que usted es quien conduce el vehículo.
-
