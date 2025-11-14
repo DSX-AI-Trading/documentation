@@ -1,9 +1,18 @@
+# Título y descripción
 title: "DSX AI Trading"
 description: "Advanced AI Trading System for Crypto Futures"
-theme: jekyll-theme-cayman
 url: "https://dsx-ai-trading.github.io/documentation/"
 
-# Habilita la búsqueda (si el tema la soporta)
+# --- Cambios Principales ---
+# 1. Elimina 'theme: jekyll-theme-cayman'
+# 2. Añade el nuevo tema 'remote_theme'
+remote_theme: just-the-docs/just-the-docs
+
+# 3. Habilita el modo oscuro
+color_scheme: dark
+# --- Fin de Cambios Principales ---
+
+# Habilita la búsqueda (soportada por el nuevo tema)
 search_enabled: true
 # Crea enlaces automáticos para los encabezados
 heading_anchors: true
