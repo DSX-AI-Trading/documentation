@@ -17,16 +17,6 @@ Nuestra misión es simple: **Utilizar el poder del *machine learning* para encon
 
 ---
 
-### 📚 Tabla de Contenidos
-
-1.  [Los 3 Pilares de Nuestra Ventaja](#los-3-pilares-de-nuestra-ventaja)
-2.  [Explicación de Features (Indicadores)](#-explicación-de-features-indicadores)
-3.  [Los Agentes de IA](#-los-agentes-de-ia)
-4.  [Anatomía de las Alertas de Telegram](#-anatomía-de-las-alertas-de-telegram)
-5.  [Aviso Importante: Gestión de Riesgo](#-aviso-importante-gestión-de-riesgo-y-descargo-de-responsabilidad)
-
----
-
 ## Los 3 Pilares de Nuestra Ventaja
 
 El poder de DSX AI Trading no proviene de un solo indicador, sino de la **confluencia** de tres capas de análisis:
@@ -128,8 +118,7 @@ Cada alerta es una **"Propuesta de Operación"** completa generada por la IA. In
 ⛔ **STOP LOSS:** 3,998.00 (Justo bajo el muro)  
 ✅ **TAKE PROFIT:** 4,025.00 (Objetivo rápido)  
 
-**EVIDENCIA (Por qué el Agente actuó):**  
-[1] Muro de Compra (A2): DETECTADO (Nivel: 4,000)  
+**EVIDENCIA (Por qué el Agente actuó):** [1] Muro de Compra (A2): DETECTADO (Nivel: 4,000)  
 [2] Desequilibrio OB (A1): FUERTE COMPRA (Ratio 1.85)  
 [3] Spread Bid/Ask (A5): BAJO (Mercado estable)
 
@@ -147,8 +136,7 @@ Cada alerta es una **"Propuesta de Operación"** completa generada por la IA. In
 ⛔ **STOP LOSS:** 60,150.00 (SL de volatilidad)  
 ✅ **TAKE PROFIT:** 61,200.00 (Objetivo de squeeze)  
 
-**EVIDENCIA (Por qué el Agente actuó):**  
-[1] Sentimiento Global (D27): EXTREMO SHORT (Ratio 9.1:1)  
+**EVIDENCIA (Por qué el Agente actuó):** [1] Sentimiento Global (D27): EXTREMO SHORT (Ratio 9.1:1)  
 [2] Funding Rate (C20): NEGATIVO (Tasa -0.045%)  
 [3] Volumen Liq 1m (C26): PICO (4.5M Liquidado)
 
@@ -168,8 +156,7 @@ Estas alertas ahora incluyen **TEMPORALIDAD** (el timeframe del agente) y **CONF
 ⛔️ **STOP LOSS:** 0.2061  
 ✅ **TAKE PROFIT:** 0.1255  
 
-**EVIDENCIA (Por qué el Agente actuó):**  
-[1] RSI (1w): 43.55  
+**EVIDENCIA (Por qué el Agente actuó):** [1] RSI (1w): 43.55  
 [2] ADX (1w): 20.38  
 [3] RSI (1d): 32.67  
 [4] ADX (4h): 39.33
@@ -211,11 +198,3 @@ La IA proporciona la *señal*. Usted proporciona la *gestión*. El factor más i
 
 
 En resumen: **DSX AI Trading** es una herramienta de análisis de datos avanzada. Úselo como un copiloto inteligente, pero recuerde que usted es quien conduce el vehículo.
-
-
-
-
-
-
-
-
