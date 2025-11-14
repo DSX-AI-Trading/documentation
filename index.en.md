@@ -17,24 +17,32 @@ Our mission is simple: **To use the power of machine learning to find patterns a
 
 ---
 
-## The 3 Pillars of Our Advantage
+## 🤖 Our Agent Ecosystem
 
-The power of DSX AI Trading comes not from a single indicator, but from the **confluence** of three layers of analysis:
+The power of DSX AI Trading comes from two types of specialized agents that analyze the market in fundamentally different ways.
 
-1.  **Microstructure Analysis (Wall Hunter Agents):**
-    We monitor the "depth" of the market in real-time (the order book). This allows us to see the intent of large players ("whales") before their actions are reflected in the price.
-2.  **Sentiment and Liquidation Analysis (Liquidation Hunter Agents):**
-    We measure market "psychology". By tracking leverage, funding rates, and crowd panic/euphoria, our agents specialize in anticipating sharp movements caused by "liquidation cascades".
-3.  **Specialized Trend Analysis (Swing Agents):**
-    We identify the market's "main tide". To do this, we have split our Swing agent into **four independent, specialized agents**, one for each key timeframe (1h, 4h, 1d, 1w), allowing us to capture trends at all levels.
+### 1. The "Liquidation Hunter" Agent (LIQ)
+This is our high-frequency **scalping** agent. Its mission is twofold:
+
+* **1. Microstructure Analysis:** It monitors the order book (Group A) in real-time to "hunt" the intentions of "whales," looking for liquidity "walls" that act as floors or ceilings.
+* **2. Sentiment Analysis:** It measures market "psychology" (Groups C & D). It specializes in anticipating sharp moves caused by "liquidation cascades" by trading *against* the euphoric or panicked crowd.
+
+By combining these two techniques, the LIQ agent seeks to capture fast, explosive movements with high precision.
+
+### 2. The "Trend" Agents (MTA)
+These are our **swing trading** "strategist" agents. Instead of a single "multi-timeframe" agent, we have created **three distinct, specialized agents (1h, 4h, and 1d)**.
+
+These are the three agents that **passed our rigorous historical backtesting**, proving to be robust and profitable. Each agent (e.g., the 4h) operates independently, 100% focused on its own timeframe to capture the market's "main tide."
+
+---
 
 ## 📊 Feature Explanation (Indicators)
 
 This is the "list of ingredients" or the data our AI uses to make decisions.
 
-### Group A: Order Book & Liquidity (The "Wall Hunter" Agent)
+### Group A: Order Book & Liquidity (Microstructure Analysis)
 
-**Key Concept:** The "Order Book" is the list of all buy (Bid) and sell (Ask) offers. The "Wall Hunter" Agent watches this list to find "walls," which are gigantic orders placed by "whales" (traders with a lot of money).
+**Key Concept:** The "Order Book" is the list of all buy (Bid) and sell (Ask) offers. The agent watches this list to find "walls," which are gigantic orders placed by "whales" (traders with a lot of money).
 
 * **A1_order_book_imbalance:** Measures if there is more buying or selling "pressure" right now.
 * **A2_large_walls_presence:** A "whale" detector. It looks for the sudden appearance of an unusually large buy or sell order.
@@ -82,89 +90,55 @@ This is the "list of ingredients" or the data our AI uses to make decisions.
 * **D27_global_ls_ratio (Global Long/Short Ratio):** Measures the sentiment of *all* retail traders. If 90% are betting on a rise, it's a sign of extreme euphoria and danger.
 * **D28_toptrader_ls_ratio (Top Traders Long/Short Ratio):** Measures what the "professionals" are doing. It's compared to D27 to see if the "pros" agree with the "herd" or are betting against them.
 
-## 🤖 The AI Agents
-
-### Module 1: The "Wall Hunter" Agent
-
-* **What is it?** Our high-frequency scalping agent. Its sole mission is to watch the order book (Group A) to "hunt" the intentions of the "whales."
-* **How does it work?** It analyzes market "depth" looking for gigantic orders ("walls") that act as "floors" or "ceilings" for the price.
-* **The Advantage:** It seeks to position *with* the whales and not *against* them, capturing small movements with high precision.
-
-### Module 2: The "Liquidation Hunter" Agent
-
-* **What is it?** Our "momentum" agent, designed to detect "pain points" and anticipate "liquidation cascades."
-* **How does it work?** It's a specialist in sentiment (Groups C & D). It measures the "tension" and "euphoria" or "panic" of the crowd, knowing the market often does the opposite to "punish" the majority.
-* **The Advantage:** It doesn't follow the price; it follows the "crowd." It anticipates explosive moves by trading *against* popular sentiment.
-
-### Module 3: The "Swing" Agents (1h, 4h, 1d, 1w)
-
-* **What are they?** These are our "strategist" agents. Instead of a single "multi-timeframe" (MTA) agent, we have created **four distinct, specialized agents** (1h, 4h, 1d, 1w) to capture the dominant trends at each level.
-* **How do they work?** Each agent (e.g., the 4h) operates independently, 100% focused on its own timeframe. They analyze trend strength (B16) and momentum (B13) to find optimal entry points. The AI model also calculates a **confidence score** for each signal.
-* **The Advantage:** This specialization gives us much greater precision. The 1h agent captures intraday trends, while the 1w agent focuses on major market moves, allowing the user to choose the strategy that best fits their style.
+---
 
 ## 📢 Anatomy of a Telegram Alert
 
 Each alert is a complete **"Trade Proposal"** generated by the AI. It includes the reason for the entry and the exact management parameters the model has calculated as optimal.
 
-### Example 1: The "Wall Hunter" Agent (Scalping)
-
-🧱 **DSX - WALL HUNTER ALERT** 🧱  
-📈 **TYPE:** SCALP (Wall Bounce)  
-🪙 **PAIR:** ETH/USDT  
-⏰ **DATE:** 2025-11-12 12:30:00 UTC  
-⏳ **TIMEFRAME:** 1m  
-🧠 **CONFIDENCE:** 92.15%  
-🎯 **ENTRY PRICE:** 4,010.50  
-⛔ **STOP LOSS:** 3,998.00 (Just below the wall)  
-✅ **TAKE PROFIT:** 4,025.00 (Quick target)  
-
-**EVIDENCE (Why the Agent acted):**  
-[1] Buy Wall (A2): DETECTED (Level: 4,000)  
-[2] OB Imbalance (A1): STRONG BUY (Ratio 1.85)  
-[3] Bid/Ask Spread (A5): LOW (Stable market)
-
-**Interpretation:** The AI proposes entering at 4,010.50. The risk (Stop Loss) is set at 3,998.00, protected by the 4,000 wall. The profit target (Take Profit) is a short, quick move.
-
-### Example 2: The "Liquidation Hunter" Agent (Momentum)
+### Example 1: The "Liquidation Hunter" (Scalping)
 
 🔥 **DSX - LIQ-HUNTER ALERT** 🔥  
-📈 **TYPE:** LONG (Anti-Sentiment Squeeze)  
+📈 **TYPE:** SCALP (Anti-Sentiment Squeeze)  
 🪙 **PAIR:** BTC/USDT  
 ⏰ **DATE:** 2025-11-12 11:50:00 UTC  
-⏳ **TIMEFRAME:** 5m  
-🧠 **CONFIDENCE:** 85.50%  
+⏳ **TIMEFRAME:** 1m-5m  
+🧠 **CONFIDENCE:** 88.20%  
 🎯 **ENTRY PRICE:** 60,500.25  
 ⛔ **STOP LOSS:** 60,150.00 (Volatility SL)  
 ✅ **TAKE PROFIT:** 61,200.00 (Squeeze target)  
 
 **EVIDENCE (Why the Agent acted):**  
 [1] Global Sentiment (D27): EXTREME SHORT (Ratio 9.1:1)  
-[2] Funding Rate (C20): NEGATIVE (Rate -0.045%)  
-[3] Liq Volume 1m (C26): SPIKE (4.5M Liquidated)
+[2] Buy Wall (A2): DETECTED (Level: 60,200)  
+[3] Liq Volume 1m (C26): SPIKE (4.5M Liquidated)  
+[4] Funding Rate (C20): NEGATIVE (Rate -0.045%)
 
-**Interpretation:** The AI enters at 60,500. It sets a Stop Loss (60,150) far enough to avoid initial "noise," and a profit target (61,200) where the cascade of short liquidations might begin to exhaust.
+**Interpretation:** The AI detects extreme panic (everyone is SHORT), but simultaneously sees a "whale" (Wall) protecting the price at 60,200. The AI is betting that the panic is overdone and the price will rebound sharply (a "squeeze") to liquidate those shorts.
 
-### Example 3: The "Swing" Agent (e.g., 1 Week)
+### Example 2: The "Swing" Agent (Trend)
 
-These alerts now include **TIMEFRAME** and **CONFIDENCE**.
+These alerts now include **TIMEFRAME** (the agent's timeframe) and **CONFIDENCE** (the AI's score).
 
 📊 **DSX - SWING MTA ALERT** 📊  
-📈 **TYPE:** SWING SHORT (1w)  
-🪙 **PAIR:** DOGEUSDT  
-⏰ **DATE:** 2025-11-03 00:00:00 UTC  
-⏳ **TIMEFRAME:** 1w  
-🧠 **CONFIDENCE:** 72.06%  
-🎯 **ENTRY PRICE:** 0.1792  
-⛔️ **STOP LOSS:** 0.2061  
-✅ **TAKE PROFIT:** 0.1255  
+📈 **TYPE:** SWING LONG (4h)  
+🪙 **PAIR:** SOL/USDT  
+⏰ **DATE:** 2025-11-03 16:00:00 UTC  
+⏳ **TIMEFRAME:** 4h  
+🧠 **CONFIDENCE:** 81.30%  
+🎯 **ENTRY PRICE:** 142.50  
+⛔️ **STOP LOSS:** 138.22  
+✅ **TAKE PROFIT:** 151.05  
 
-**EVIDENCIA (Why the Agent acted):**  
-[1] RSI (1w): 43.55  
-[2] ADX (1w): 20.38  
-[3] RSI (1d): 32.67  
-[4] ADX (4h): 39.33
+**EVIDENCE (Why the Agent acted):**  
+[1] RSI (4h): 58.10 (Bullish momentum)  
+[2] ADX (4h): 29.50 (Trend confirmed)  
+[3] RSI (1d): 65.20 (Bullish macro context)  
+[4] ADX (1h): 22.00 (Low-risk entry)
 
-**Interpretation:** The specialized 1-week (1w) agent detected a SHORT signal. The AI assigns it a **confidence of 72.06%**. The evidence shows a mix of indicators from various timeframes that the model deems bearish.
+**Interpretation:** The specialized 4-hour (4h) agent detected a LONG signal. The AI assigns it an **81.30% confidence**. The evidence shows a confluence of trend and momentum indicators across multiple timeframes that the model deems strongly bullish.
+
+---
 
 ## ⚠️ IMPORTANT: Risk Management & Disclaimer
 
@@ -177,7 +151,7 @@ The signals and information provided by **DSX AI Trading** (hereafter "the Servi
 * **NOT FINANCIAL ADVICE:** The Service does not constitute investment advice, or a recommendation or solicitation to buy or sell any digital asset.
 * **HIGH RISK:** Cryptocurrency futures trading is highly speculative and involves substantial risk of loss. You may lose your entire invested capital.
 * **NO GUARANTEES:** Past performance of our AI models is not a guarantee of future results. Markets change, and AI models are not infallible. Losses can and will occur.
-* **YOU ARE SOLELY RESPONSIBLE:** All trading decisions you make are your sole responsibility. We are not liable for any losses you may find as a result of using our alerts.
+* **YOU ARE SOLELY RESPONSIBLE:** All trading decisions you make are your sole responsibility. We are not liable for any losses you may incur as a result of using our alerts.
 
 ### 2. How to Interpret the AI Signals
 
@@ -199,6 +173,4 @@ The AI provides the *signal*. You provide the *management*. The most important f
 * **Position Sizing:** It is your job to determine *how much money* to allocate to each trade. A professional rarely risks more than 1-2% of their total capital on a single trade.
 * **Trader's Autonomy:** You have final control. If you don't like a signal, or it doesn't fit your personal analysis, **do not take the trade**.
 
-
 In short: **DSX AI Trading** is an advanced data analysis tool to help you spot opportunities. It is not a "get rich quick" system or a guarantee of profits. Use it as an intelligent co-pilot, but remember that you are the one driving.
-
