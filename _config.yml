@@ -10,12 +10,7 @@ remote_theme: just-the-docs/just-the-docs
 
 # 3. Habilita el modo oscuro
 color_scheme: dark
-
-# --- ¡NUEVA LÍNEA PARA EL LOGO! ---
-# Añade la ruta a tu logo.
-# (Asegúrate de que el archivo logo_futurista.png esté en /assets/images/)
-logo: "/assets/images/dsx_logo_futurista.png"
-# --- Fin de la nueva línea ---
+# --- Fin de Cambios Principales ---
 
 # Habilita la búsqueda (soportada por el nuevo tema)
 search_enabled: true
